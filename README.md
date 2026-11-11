@@ -38,11 +38,11 @@ flowchart LR
 
 数据治理后有 **5,275 张有效图片、18 类**，固定划分为训练 **3,692**、验证 **795**、独立测试 **788** 张。模型以 ImageNet 预训练 ConvNeXt-Tiny 迁移学习；Run02 第 8 轮由验证集 Macro-F1 选出，验证集 Accuracy **96.98%**、Macro-F1 **96.62%**。该权重在独立测试集上的 Accuracy **97.08%**、Macro-Precision **97.11%**、Macro-Recall **96.67%**、Macro-F1 **96.76%**，正确 **765/788** 张。来源见[数据划分报告](reports/data_split/split_report.md)、[实验日志](docs/experiment-log.md)及[最终测试归档](experiments/final_evaluation/evaluation_summary.md)。验证集与测试集指标分别统计。
 
-**模型权重不在 Git 仓库中。** 默认需要 `models/convnext_tiny_best.pt`（约 111 MB），可用 `HERB_MODEL_PATH` 指向已有的 Run02 第 8 轮最佳权重。GitHub Release 模型附件尚未发布，下载地址待发布并校验后补充；仅克隆仓库无法启动图像识别服务。后端启动时会校验权重、类别映射和实验归档。详见[模型文档](docs/model.md)。
+**模型权重不在 Git 仓库中。** 从[模型 Release](https://github.com/zhizhezhang/hurb-classification/releases/tag/model-run02-epoch8-f1f2c67)下载 [convnext_tiny_best.pt](https://github.com/zhizhezhang/hurb-classification/releases/download/model-run02-epoch8-f1f2c67/convnext_tiny_best.pt)，保存为仓库根目录的 `models/convnext_tiny_best.pt`（111,392,415 字节）。SHA256：`202072243d01e7e47a4e008e0e6480d5446a2124f48f8512cca1ea3b379e814f`。也可用 `HERB_MODEL_PATH` 指向该权重。后端启动时会校验权重、类别映射和实验归档；仅克隆源码仍需另行下载权重才能启动识别。详见[模型文档](docs/model.md)。
 
 ## 快速开始
 
-以下命令从**仓库根目录**开始。先准备 Python ≥3.10、Node.js/npm，以及与机器兼容的 PyTorch 和 Torchvision。Python 环境没有完整锁定；全新机器上的安装尚未端到端验证。代码推送到目标仓库后，可按以下命令克隆。当前独立副本尚未推送，发布前无法通过该命令取得项目内容：
+以下命令从**仓库根目录**开始。先准备 Python ≥3.10、Node.js/npm，以及与机器兼容的 PyTorch 和 Torchvision。Python 环境没有完整锁定；全新机器上的安装尚未端到端验证。可按以下命令克隆公开仓库：
 
 ```powershell
 $repoUrl = 'https://github.com/zhizhezhang/hurb-classification.git'
@@ -60,7 +60,7 @@ npm ci
 Set-Location ..
 ```
 
-可编辑安装需要 setuptools ≥61。将已取得并核验的 Run02 权重放到 `models/convnext_tiny_best.pt`，或在启动后端的终端设置 `HERB_MODEL_PATH`。**另开终端**，从仓库根目录启动：
+可编辑安装需要 setuptools ≥61。下载并核验模型权重后，将其放到 `models/convnext_tiny_best.pt`，或在启动后端的终端设置 `HERB_MODEL_PATH`。具体下载与校验命令见[部署说明](docs/deployment.md)。**另开终端**，从仓库根目录启动：
 
 ```powershell
 python -m uvicorn backend.main:app --host 127.0.0.1 --port 8000

@@ -4,7 +4,7 @@
 
 ## 导出与脱敏范围
 
-- 未导出原始训练图片、模型权重、虚拟环境、`node_modules`、运行时数据库、上传图片、缓存及密钥。`models/README.md` 仅说明未来模型附件的放置与校验方式。
+- 未导出原始训练图片、模型权重、虚拟环境、`node_modules`、运行时数据库、上传图片、缓存及密钥。`models/README.md` 说明已发布模型附件的放置与校验方式。
 - 在本公开副本中，将实验归档的 `experiments/final_evaluation/test_metrics.json`、`experiments/run02/run_info.json`，以及数据治理报告中的 4 份 JSON 路径字段改为仓库相对路径。指标、类别、划分和文件哈希记录未改；原始归档仍保留在参赛开发工作区。
 - 将 `experiments/final_evaluation/evaluation_summary.md`、C4.1/C4.2/C4.6 报告、数据审计与清洗报告、`scripts/README_data_cleaning.md` 中的本机工作区或 Python 解释器路径改为相对路径、`python` 命令或明确占位符。仅在本副本做路径脱敏，原始报告未改。
 - 数据审计、清洗与人工复核三份历史报告原有 17 个链接指向从未纳入 Git 的原始审计附件；公开副本将其标为“原始附件未随公开源码提供”，保留文件名、数值和结论。
@@ -16,6 +16,6 @@
 
 真实联调报告与浏览器截图保留在 `reports/competition/`；[AI 开发迭代索引](docs/competition/ai-development-record.md)给出三组用户需求、问题修正与可核对实现。完整对话导出和 Codex 逐字回复未随仓库归档，索引不将它们冒充为已保存的原始记录。
 
-## 发布前待办
+## 发布状态
 
-本公开副本已为原创源码添加 MIT License 并初始化独立 Git 仓库。模型权重的单独许可声明尚未确定，第三方资源仍遵循各自适用的授权条件。GitHub Release 附件尚不存在，文档不含虚构下载链接；远程发布需另行确认。
+本公开副本已为原创源码添加 MIT License 并初始化独立 Git 仓库。模型权重的单独许可声明尚未确定，第三方资源仍遵循各自适用的授权条件。源码已推送至公开仓库，模型附件已在[Run02 Epoch 8 Release](https://github.com/zhizhezhang/hurb-classification/releases/tag/model-run02-epoch8-f1f2c67)发布；权重仍不进入普通 Git 历史。

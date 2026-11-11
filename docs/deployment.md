@@ -19,7 +19,25 @@ Set-Location ..
 
 ## 2. 权重和配置
 
-将经归档验证的 Run02 第 8 轮最佳权重放在 `models/convnext_tiny_best.pt`。也可设置 `HERB_MODEL_PATH` 为该文件的绝对路径或仓库根目录相对路径。**Git 不包含权重，GitHub Release 附件尚未发布，下载地址待正式发布并校验后补充。** 缺失或不匹配会在 FastAPI 启动时失败；无法仅靠克隆仓库完整运行识别。
+从[模型 Release](https://github.com/zhizhezhang/hurb-classification/releases/tag/model-run02-epoch8-f1f2c67)下载 [Run02 第 8 轮权重](https://github.com/zhizhezhang/hurb-classification/releases/download/model-run02-epoch8-f1f2c67/convnext_tiny_best.pt)，保存为仓库根目录的 `models/convnext_tiny_best.pt`。文件大小为 111,392,415 字节，SHA256 为 `202072243d01e7e47a4e008e0e6480d5446a2124f48f8512cca1ea3b379e814f`。也可设置 `HERB_MODEL_PATH` 为该文件的绝对路径或仓库根目录相对路径。权重不在 Git 历史中；缺失或不匹配会在 FastAPI 启动时失败。
+
+Windows PowerShell（在仓库根目录执行）：
+
+```powershell
+$modelUrl = 'https://github.com/zhizhezhang/hurb-classification/releases/download/model-run02-epoch8-f1f2c67/convnext_tiny_best.pt'
+$modelPath = 'models/convnext_tiny_best.pt'
+Invoke-WebRequest -Uri $modelUrl -OutFile $modelPath
+$expected = '202072243d01e7e47a4e008e0e6480d5446a2124f48f8512cca1ea3b379e814f'
+$actual = (Get-FileHash -LiteralPath $modelPath -Algorithm SHA256).Hash.ToLowerInvariant()
+if ($actual -ne $expected) { throw '模型文件 SHA256 不匹配' }
+```
+
+Linux（在仓库根目录执行）：
+
+```bash
+curl -fL 'https://github.com/zhizhezhang/hurb-classification/releases/download/model-run02-epoch8-f1f2c67/convnext_tiny_best.pt' -o models/convnext_tiny_best.pt
+printf '%s  %s\n' '202072243d01e7e47a4e008e0e6480d5446a2124f48f8512cca1ea3b379e814f' 'models/convnext_tiny_best.pt' | sha256sum -c -
+```
 
 | 环境变量 | 作用与默认值 |
 | --- | --- |

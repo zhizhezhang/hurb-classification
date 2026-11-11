@@ -19,4 +19,4 @@ Run02 第 8 轮权重在独立测试集上的结果：**Accuracy 97.08%**、**Ma
 
 ## 权重与推理
 
-默认权重路径是仓库根目录 `models/convnext_tiny_best.pt`；`HERB_MODEL_PATH` 可指定绝对路径，或相对于仓库根目录的路径。启动时后端校验权重类别、预处理配置及最终评估归档的 SHA-256。模型在应用生命周期开始时加载；缺少权重或校验失败时服务无法完成启动。权重约 111 MB，被 Git 忽略，GitHub Release 附件尚未发布，下载地址待正式发布并校验后补充。已有权重的持有人可复制 Run02 第 8 轮 `best.pt` 到默认路径；仅克隆仓库无法运行图像识别。完整步骤见[部署文档](deployment.md)。
+默认权重路径是仓库根目录 `models/convnext_tiny_best.pt`；`HERB_MODEL_PATH` 可指定绝对路径，或相对于仓库根目录的路径。从[模型 Release](https://github.com/zhizhezhang/hurb-classification/releases/tag/model-run02-epoch8-f1f2c67)下载 [convnext_tiny_best.pt](https://github.com/zhizhezhang/hurb-classification/releases/download/model-run02-epoch8-f1f2c67/convnext_tiny_best.pt)，文件大小为 111,392,415 字节，SHA256 为 `202072243d01e7e47a4e008e0e6480d5446a2124f48f8512cca1ea3b379e814f`。权重被 Git 忽略，克隆源码后须另行下载才能运行图像识别。模型在应用生命周期开始时加载，后端会校验权重类别、预处理配置及最终评估归档的 SHA-256；缺少权重或校验失败时服务无法完成启动。下载与校验命令见[部署文档](deployment.md)。
