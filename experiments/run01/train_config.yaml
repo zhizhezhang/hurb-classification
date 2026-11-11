@@ -1,0 +1,16 @@
+model: convnext_tiny
+weights: ConvNeXt_Tiny_Weights.IMAGENET1K_V1
+num_classes: 18
+input_size: 224
+batch_size: 8
+epochs: 20
+optimizer: AdamW
+learning_rate: 0.0001
+weight_decay: 0.01
+loss: CrossEntropyLoss
+seed: 42
+amp: true
+patience: 5
+num_workers: 0
+device: cuda
+output_dir: runs/convnext_tiny_20261027_run01

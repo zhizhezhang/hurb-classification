@@ -1,0 +1,21 @@
+{
+  "audit_file_count": 5366,
+  "audit_phash_pairs": 366,
+  "exact_groups": 53,
+  "auto_excluded_files": 53,
+  "clean_manifest_files": 5313,
+  "phash_pairs_after_exact_normalization": 360,
+  "phash_pairs_covered_by_exact_groups": 0,
+  "phash_review_groups": 295,
+  "focus_review_images": 9,
+  "unique_manual_review_images": 628,
+  "auto_excluded_phash_files": 0,
+  "source_audit_sha256": {
+    "images.csv": "12c5f87ac3464481f62afb8c2b2468cb1886958f68118d980f508364c1f03f79",
+    "exact_duplicate_groups.csv": "ffa802c25e7d1c43908f40de3139e1bd5ceb11f1fca9e07d59ba9e0a4f53ffd3",
+    "phash_similar_pairs.csv": "a950378189e615ecf293fb304c7ddbd23a46a15cead9b0f1d1745db036c2b13c",
+    "anomalies.csv": "0b3ab77feeb8e65848bb704f1355ce3c88ce680f936ef58bd1a26ee07e2b175b",
+    "summary.json": "23d52a15d6c4fff0e17eeb2b92e955d9cc2fad145af920dff7b82187af1ce367"
+  },
+  "original_dataset_modified": false
+}

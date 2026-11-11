@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "dataset_path": "Chinese Medicine datasets",
+  "submitted_exported_at": "2026-10-27T14:21:53.234Z",
+  "input_json_sha256": "3ccf76625fb9dada0155baa67e840c4ebaea96ed120ffbc48615f7b993e40f58",
+  "input_csv_sha256": "2ea21c5a4c5e3a07554494e0eff6a117d894a2292994b72dea28ae8b0a9e2ac6",
+  "baseline_clean_images": 5313,
+  "baseline_exact_exclusions": 53,
+  "review_candidate_pairs": 360,
+  "pair_decisions": {
+    "same_source": 360
+  },
+  "pending_pair_count": 0,
+  "pending_group_ids": [],
+  "confirmed_source_groups": 295,
+  "image_decisions": {
+    "keep": 12,
+    "exclude": 38,
+    "uncertain": 1
+  },
+  "manual_image_exclusions": 38,
+  "uncertain_image_paths": [
+    "灵芝/03 (121).jpg"
+  ],
+  "reviewed_clean_images": 5275,
+  "total_excluded_images": 91,
+  "pending_pairs_kept": true,
+  "uncertain_images_kept": true,
+  "confirmed_pairs_not_auto_removed": true
+}

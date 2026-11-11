@@ -1,0 +1,219 @@
+.analysis-page {
+  width: 100%;
+  padding: 10px 0 56px;
+  color: #33251c;
+}
+
+.analysis-page-title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  font-family: var(--font-title);
+}
+
+.analysis-panel {
+  min-width: 0;
+  margin-bottom: 16px;
+  padding: 18px 25px 24px;
+  border: 1px solid #d1ac7e;
+  outline: 1px solid rgba(166, 112, 64, 0.3);
+  outline-offset: -6px;
+  border-radius: 12px 4px 12px 4px;
+  background: rgba(250, 238, 217, 0.91);
+}
+
+.analysis-section-title {
+  display: inline-block;
+  position: relative;
+  margin: 0 0 17px;
+  padding: 3px 24px 5px 15px;
+  color: #382419;
+  font-family: var(--font-subtitle);
+  font-size: clamp(23px, 2vw, 29px);
+  font-weight: 400;
+  line-height: 1.3;
+  background: #ecd1a8;
+  clip-path: polygon(0 9%, 11% 3%, 27% 7%, 43% 0, 62% 5%, 83% 1%, 100% 16%, 96% 50%, 100% 84%, 79% 91%, 62% 100%, 39% 94%, 16% 100%, 0 86%, 4% 52%);
+}
+
+.analysis-overview-grid,
+.analysis-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0;
+}
+
+.analysis-overview-grid {
+  gap: 13px;
+}
+
+.analysis-overview-item {
+  min-width: 0;
+  padding: 14px 18px;
+  border: 1px solid rgba(198, 159, 113, 0.38);
+  border-radius: 7px;
+  background: rgba(241, 217, 184, 0.48);
+}
+
+.analysis-overview-item dt {
+  margin-bottom: 8px;
+  color: #79614d;
+  font-family: var(--font-body);
+  font-size: 17px;
+}
+
+.analysis-overview-item dd {
+  margin: 0;
+  font-family: Georgia, 'Times New Roman', var(--font-body);
+  font-size: clamp(19px, 1.7vw, 26px);
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.analysis-metric-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 3px 20px 4px;
+  text-align: center;
+}
+
+.analysis-metric-item + .analysis-metric-item {
+  border-left: 1px solid #d9b98e;
+}
+
+.analysis-metric-item dd {
+  order: -1;
+  margin: 0 0 4px;
+  color: #a52819;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(29px, 2.6vw, 42px);
+  font-weight: 700;
+  line-height: 1.15;
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.analysis-metric-item dt {
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.3vw, 19px);
+  line-height: 1.25;
+}
+
+.analysis-metric-item small {
+  display: block;
+  margin-top: 3px;
+  color: #806955;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 13px;
+}
+
+.analysis-charts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.analysis-chart-panel {
+  margin-bottom: 0;
+  padding-bottom: 17px;
+}
+
+.analysis-chart-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+}
+
+.analysis-matrix-scroll {
+  min-width: 0;
+}
+
+.analysis-feedback {
+  margin: 0;
+  padding: 18px 8px;
+  color: #745f4f;
+  font-size: 18px;
+  text-align: center;
+}
+
+.analysis-feedback--error {
+  color: #a52819;
+}
+
+@media (max-width: 1100px) {
+  .analysis-charts {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .analysis-matrix-scroll {
+    max-width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+  }
+
+  .analysis-matrix-scroll .analysis-chart-image {
+    width: 960px;
+    max-width: none;
+  }
+
+  .analysis-overview-grid,
+  .analysis-metrics-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analysis-metric-item:nth-child(3) {
+    border-left: 0;
+  }
+
+  .analysis-metric-item:nth-child(n + 3) {
+    margin-top: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .analysis-page {
+    padding-top: 12px;
+  }
+
+  .analysis-panel {
+    padding: 13px 14px 18px;
+  }
+
+  .analysis-overview-grid {
+    gap: 8px;
+  }
+
+  .analysis-overview-item {
+    padding: 10px;
+  }
+
+  .analysis-overview-item dt {
+    font-size: 15px;
+  }
+
+  .analysis-overview-item dd {
+    font-size: 18px;
+  }
+
+  .analysis-metric-item {
+    padding-inline: 5px;
+  }
+
+  .analysis-metric-item dd {
+    font-size: 27px;
+  }
+
+  .analysis-metric-item small {
+    font-size: 12px;
+  }
+}

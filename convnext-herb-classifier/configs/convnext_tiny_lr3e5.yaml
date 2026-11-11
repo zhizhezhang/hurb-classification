@@ -1,0 +1,17 @@
+model: convnext_tiny
+weights: ConvNeXt_Tiny_Weights.IMAGENET1K_V1
+num_classes: 18
+input_size: 224
+batch_size: 8
+epochs: 20
+optimizer: AdamW
+learning_rate: 0.00003
+weight_decay: 0.01
+loss: CrossEntropyLoss
+seed: 42
+amp: true
+patience: 5
+num_workers: 0
+device: cuda
+experiment_name: convnext_tiny_lr3e5
+runs_dir: runs

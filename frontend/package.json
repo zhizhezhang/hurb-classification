@@ -1,0 +1,20 @@
+{
+  "name": "lingzhi-bencao-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5173 --strictPort",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "markdown-it": "15.0.3",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.1",
+    "vite": "^7.0.6"
+  }
+}

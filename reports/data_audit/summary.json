@@ -1,0 +1,169 @@
+{
+  "dataset_path": "Chinese Medicine datasets",
+  "class_count": 18,
+  "file_count": 5366,
+  "valid_image_count": 5366,
+  "invalid_file_count": 0,
+  "classes": [
+    {
+      "class": "九层塔",
+      "file_count": 250,
+      "valid_image_count": 250
+    },
+    {
+      "class": "人参",
+      "file_count": 235,
+      "valid_image_count": 235
+    },
+    {
+      "class": "冬虫夏草",
+      "file_count": 248,
+      "valid_image_count": 248
+    },
+    {
+      "class": "干枸杞",
+      "file_count": 250,
+      "valid_image_count": 250
+    },
+    {
+      "class": "当归",
+      "file_count": 250,
+      "valid_image_count": 250
+    },
+    {
+      "class": "无花果",
+      "file_count": 250,
+      "valid_image_count": 250
+    },
+    {
+      "class": "柿蒂",
+      "file_count": 248,
+      "valid_image_count": 248
+    },
+    {
+      "class": "槐花",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "灵芝",
+      "file_count": 1003,
+      "valid_image_count": 1003
+    },
+    {
+      "class": "罗汉果",
+      "file_count": 248,
+      "valid_image_count": 248
+    },
+    {
+      "class": "艾叶",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "芦荟",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "苍耳子",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "车前草",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "金钱草",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "金银花",
+      "file_count": 249,
+      "valid_image_count": 249
+    },
+    {
+      "class": "陈皮",
+      "file_count": 248,
+      "valid_image_count": 248
+    },
+    {
+      "class": "黄芪",
+      "file_count": 393,
+      "valid_image_count": 393
+    }
+  ],
+  "extension_counts": {
+    ".jpg": 1631,
+    ".png": 3735
+  },
+  "format_counts": {
+    "BMP": 3,
+    "JPEG": 5272,
+    "PNG": 91
+  },
+  "mode_counts": {
+    "RGB": 5279,
+    "RGBA": 87
+  },
+  "extension_content_counts": {
+    ".jpg → JPEG": 1629,
+    ".jpg → PNG": 2,
+    ".png → BMP": 3,
+    ".png → JPEG": 3643,
+    ".png → PNG": 89
+  },
+  "anomaly_counts": {
+    "extension_format_mismatch": 3648,
+    "extreme_aspect_ratio": 1,
+    "small_dimension": 4
+  },
+  "width_pixels": {
+    "min": 120.0,
+    "median": 500.0,
+    "p95": 841.5,
+    "max": 4032.0
+  },
+  "height_pixels": {
+    "min": 80.0,
+    "median": 500.0,
+    "p95": 764.75,
+    "max": 3024.0
+  },
+  "aspect_ratio": {
+    "min": 0.45,
+    "median": 1.334,
+    "p95": 1.7512,
+    "max": 3.1915
+  },
+  "file_size_bytes": {
+    "min": 4357.0,
+    "median": 46657.0,
+    "p95": 127110.0,
+    "max": 1825466.0
+  },
+  "class_balance": {
+    "min": 235,
+    "max": 1003,
+    "max_min_ratio": 4.268085106382979,
+    "coefficient_of_variation": 0.5842497297633221
+  },
+  "sample_seed": 20261027,
+  "samples_per_class": 12,
+  "phash_threshold": 6,
+  "exact_duplicate_groups": 53,
+  "files_in_exact_groups": 106,
+  "cross_class_exact_groups": 0,
+  "cross_class_exact_pairs": 0,
+  "cross_class_exact_pair_output_complete": true,
+  "phash_unique_values": 5091,
+  "phash_candidate_comparisons": 222267,
+  "phash_candidate_search_complete": true,
+  "phash_hash_pairs_within_threshold": 372,
+  "phash_similar_pairs": 366,
+  "cross_class_phash_pairs": 0,
+  "phash_pair_output_complete": true
+}

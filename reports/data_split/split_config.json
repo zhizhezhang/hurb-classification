@@ -1,0 +1,130 @@
+{
+  "seed": 42,
+  "requested_ratios": {
+    "train": 0.7,
+    "val": 0.15,
+    "test": 0.15
+  },
+  "dataset_path": "Chinese Medicine datasets",
+  "manifest_path": "reports/data_cleaning/reviewed_clean_manifest.csv",
+  "excluded_path": "reports/data_cleaning/reviewed_excluded_images.csv",
+  "groups_path": "reports/data_cleaning/confirmed_source_groups.csv",
+  "input_sha256": {
+    "manifest": "d8f49b1d71c50db8c5b6f91ddcd451a6eeac4e91d6b63b91f66f1751a5ebc097",
+    "excluded": "d22f1bd2b6d434e5e5a936155cf0ab3c4e61bf58b66935423f9569de4b1221d1",
+    "groups": "b041b1cda53100d74b885886cd9d278a5271abba4d87c7c66f6ea62f8bd5c9fc"
+  },
+  "class_targets": {
+    "九层塔": {
+      "train": 173,
+      "val": 37,
+      "test": 37
+    },
+    "人参": {
+      "train": 164,
+      "val": 35,
+      "test": 35
+    },
+    "冬虫夏草": {
+      "train": 174,
+      "val": 37,
+      "test": 37
+    },
+    "干枸杞": {
+      "train": 175,
+      "val": 38,
+      "test": 37
+    },
+    "当归": {
+      "train": 174,
+      "val": 38,
+      "test": 37
+    },
+    "无花果": {
+      "train": 175,
+      "val": 38,
+      "test": 37
+    },
+    "柿蒂": {
+      "train": 165,
+      "val": 35,
+      "test": 35
+    },
+    "槐花": {
+      "train": 174,
+      "val": 37,
+      "test": 37
+    },
+    "灵芝": {
+      "train": 675,
+      "val": 145,
+      "test": 144
+    },
+    "罗汉果": {
+      "train": 171,
+      "val": 37,
+      "test": 37
+    },
+    "艾叶": {
+      "train": 173,
+      "val": 37,
+      "test": 37
+    },
+    "芦荟": {
+      "train": 174,
+      "val": 38,
+      "test": 37
+    },
+    "苍耳子": {
+      "train": 171,
+      "val": 37,
+      "test": 36
+    },
+    "车前草": {
+      "train": 174,
+      "val": 38,
+      "test": 37
+    },
+    "金钱草": {
+      "train": 174,
+      "val": 37,
+      "test": 37
+    },
+    "金银花": {
+      "train": 171,
+      "val": 37,
+      "test": 37
+    },
+    "陈皮": {
+      "train": 171,
+      "val": 37,
+      "test": 37
+    },
+    "黄芪": {
+      "train": 264,
+      "val": 57,
+      "test": 57
+    }
+  },
+  "group_statistics": {
+    "confirmed_group_kept_size_histogram": {
+      "0": 7,
+      "1": 11,
+      "2": 260,
+      "3": 13,
+      "4": 3,
+      "6": 1
+    },
+    "independent_group_count": 4687,
+    "split_unit_size_histogram": {
+      "1": 4698,
+      "2": 260,
+      "3": 13,
+      "4": 3,
+      "6": 1
+    },
+    "max_kept_group_size": 6,
+    "split_unit_count": 4975
+  },
+  "oversized_groups": []
+}

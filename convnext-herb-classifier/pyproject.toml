@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "convnext-herb-classifier"
+version = "0.1.0"
+description = "ConvNeXt-Tiny Chinese herb classification training package"
+requires-python = ">=3.10"
+
+[tool.setuptools]
+packages = ["herb_classifier"]
+include-package-data = false

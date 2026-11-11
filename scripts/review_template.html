@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>中药材数据集 · 人工复核</title>
+  <style>
+    :root{font-family:"Microsoft YaHei","PingFang SC",sans-serif;color:#223034;background:#f5f7f5}
+    *{box-sizing:border-box}body{margin:0}button,input,textarea{font:inherit}button{cursor:pointer}
+    header{background:#123d38;color:#fff;padding:20px max(24px,calc((100vw - 1280px)/2))}
+    header h1{margin:0 0 7px;font-size:25px}header p{margin:0;color:#dcebe6;font-size:13px}
+    .wrap{max-width:1280px;margin:auto;padding:20px 24px 36px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+    .button{border:1px solid #b9cbc5;background:#fff;color:#153f38;border-radius:8px;padding:9px 13px;font-weight:600}
+    .button:hover{background:#eaf3ef}.button.primary{background:#1c705e;color:#fff;border-color:#1c705e}.button.primary:hover{background:#165d4e}
+    .button.danger{border-color:#c58b85;color:#8e342e}.button.active{box-shadow:0 0 0 3px #8bcab1 inset;background:#e3f3eb}
+    .muted{color:#657873;font-size:13px}.spacer{flex:1}.tabs{display:flex;gap:6px;margin-bottom:16px}.tabs button{border:0;background:#dfe9e4;padding:11px 18px;border-radius:8px;font-weight:700;color:#31544c}.tabs button.active{background:#1c705e;color:white}
+    .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:17px}.stat{background:#fff;border:1px solid #dce6e1;border-radius:10px;padding:11px 14px}.stat strong{display:block;font-size:21px;color:#174e42}.stat span{font-size:12px;color:#647a72}
+    .panel{background:#fff;border:1px solid #dce6e1;border-radius:12px;padding:18px;box-shadow:0 4px 18px #123d3809}
+    .nav{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:16px}.nav select,.nav input{border:1px solid #b9cbc5;border-radius:8px;padding:9px;background:white;min-height:40px}.nav select{min-width:300px;max-width:100%}.nav input{min-width:220px;flex:1}
+    .heading{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;border-bottom:1px solid #e3eae5;padding-bottom:13px;margin-bottom:15px}.heading h2{margin:0 0 6px;font-size:20px}.badge{display:inline-block;padding:4px 8px;border-radius:99px;background:#edf1ee;color:#466258;font-size:12px;font-weight:700}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.card{border:1px solid #dce6e1;border-radius:10px;overflow:hidden;background:#fafcfb}.photo{height:315px;display:flex;align-items:center;justify-content:center;background:#edf1ee}.photo img{max-width:100%;max-height:100%;object-fit:contain}.photo.error{color:#a03932}.meta{padding:12px;word-break:break-all}.meta strong{display:block;font-size:16px;margin-bottom:4px}.meta code{font-size:12px;color:#52645e}.meta small{display:block;margin-top:6px;color:#728179}.card-actions{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}.card-actions .button{padding:6px 9px;font-size:12px}
+    .decisions{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0 10px}.decisions .button{min-width:126px}
+    .note{display:block;width:100%;min-height:64px;border:1px solid #b9cbc5;border-radius:8px;padding:9px;margin-top:8px;resize:vertical}
+    .pair-list{display:flex;gap:6px;flex-wrap:wrap;margin-top:15px}.pair-list button{border:1px solid #c6d8d0;background:#fff;border-radius:6px;padding:6px 10px}.pair-list button.selected{background:#1c705e;color:white}.pair-list button.done{border-color:#1c705e}
+    .focus-reason{background:#f4f7e9;border-left:4px solid #849b47;padding:9px 12px;margin-bottom:14px}.single{max-width:680px}.single .photo{height:380px}
+    .help{background:#e9f1ed;border-radius:9px;padding:11px 14px;color:#34574e;font-size:13px;margin-bottom:16px;line-height:1.65}
+    @media(max-width:760px){.wrap{padding:14px}.stats{grid-template-columns:repeat(2,1fr)}.cards{grid-template-columns:1fr}.photo{height:255px}.nav select{min-width:100%}.heading{display:block}}
+  </style>
+</head>
+<body>
+  <header><h1>中药材数据集 · 人工复核</h1><p>离线复核任务 02 · 原图只读 · 审核结论仅在浏览器本地保存，导出后才形成可交接记录</p></header>
+  <main class="wrap">
+    <div class="toolbar">
+      <button class="button primary" id="exportJson">导出审核 JSON</button>
+      <button class="button" id="exportCsv">导出审核 CSV</button>
+      <label class="button" for="importFile">导入已有 JSON</label><input id="importFile" type="file" accept=".json,application/json" hidden>
+      <span class="spacer"></span><button class="button danger" id="reset">清空本地决策</button>
+    </div>
+    <div class="stats" id="stats"></div>
+    <div class="tabs"><button id="tabPairs" class="active">pHash 候选组</button><button id="tabFocus">单图重点复核</button></div>
+    <div class="help">pHash 连通组只是导航方式。请逐对判断“同源重复”或“不同图片”；相似不等于重复。图片上的“排除异常样本”仅记录人工标记，不会删除原图或立即改变清洗清单。焦点不在输入框时，←/↑ 切上一组，→/↓ 切下一组；单图页切换上一张/下一张。</div>
+    <section class="panel" id="content"></section>
+  </main>
+  <script id="review-data" type="application/json">__REVIEW_DATA__</script>
+  <script>
+  (() => {
+    const data = JSON.parse(document.getElementById('review-data').textContent);
+    const pairs = Object.fromEntries(data.pairs.map(x => [x.id, x]));
+    const storageKey = 'herb-review-v1:' + data.dataset_path;
+    const empty = () => ({pairs:{}, images:{}, notes:{}});
+    let decisions = empty();
+    try { const saved = localStorage.getItem(storageKey); if (saved) decisions = {...empty(), ...JSON.parse(saved)}; } catch (_) {}
+    let tab = 'pairs', groupIndex = 0, pairIndex = 0, focusIndex = 0, search = '';
+    const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+    const save = () => { try { localStorage.setItem(storageKey, JSON.stringify(decisions)); } catch (_) {} };
+    const pairState = id => decisions.pairs[id] || 'pending';
+    const imageState = path => decisions.images[path] || 'pending';
+    const label = {pending:'待审核',same_source:'同源重复',different:'不同图片',uncertain:'暂不确定',exclude:'排除异常样本',keep:'保留样本'};
+
+    function renderStats() {
+      const counts = {same_source:0,different:0,uncertain:0,pending:0};
+      data.pairs.forEach(p => counts[pairState(p.id)]++);
+      const excluded = Object.values(decisions.images).filter(x => x === 'exclude').length;
+      document.getElementById('stats').innerHTML = `
+        <div class="stat"><strong>${data.groups.length}</strong><span>pHash 候选组 · ${data.pairs.length} 对</span></div>
+        <div class="stat"><strong>${counts.pending}</strong><span>待审核图片对</span></div>
+        <div class="stat"><strong>${counts.same_source}</strong><span>人工确认同源重复对</span></div>
+        <div class="stat"><strong>${excluded}</strong><span>标记排除的异常图片</span></div>`;
+    }
+    function imageCard(path) {
+      const img = data.images[path], state = imageState(path);
+      return `<div class="card"><div class="photo"><img src="${esc(img.url)}" alt="${esc(path)}" loading="eager" onerror="this.parentElement.classList.add('error');this.replaceWith(document.createTextNode('图片无法加载：请从原项目目录打开此 HTML'))"></div>
+        <div class="meta"><strong>${esc(img.class)}</strong><code>${esc(img.name)}</code><small>${esc(path)} · ${esc(img.width)}×${esc(img.height)} · ${esc(img.flags || '无审计标记')}</small>
+        <div class="card-actions"><button class="button ${state==='exclude'?'active':''}" data-image="${esc(path)}" data-state="exclude">排除异常样本</button>
+        <button class="button ${state==='keep'?'active':''}" data-image="${esc(path)}" data-state="keep">保留样本</button>
+        <button class="button ${state==='uncertain'?'active':''}" data-image="${esc(path)}" data-state="uncertain">暂不确定</button></div>
+        <small>当前标记：${label[state]}</small></div></div>`;
+    }
+    function noteBox(key) {
+      return `<label class="muted" for="reviewNote">备注（可选）</label><textarea class="note" id="reviewNote" data-note="${esc(key)}" placeholder="记录相似原因、标签疑点或处理依据">${esc(decisions.notes[key] || '')}</textarea>`;
+    }
+    function renderPairs() {
+      const group = data.groups[groupIndex];
+      if (!group) { document.getElementById('content').textContent='暂无候选组'; return; }
+      pairIndex = Math.min(pairIndex, group.pair_ids.length - 1);
+      const pair = pairs[group.pair_ids[pairIndex]], state = pairState(pair.id);
+      const options = data.groups.map((g,i) => {
+        const first = data.images[g.member_paths[0]];
+        const text = `${g.id} · ${first.class} · ${g.member_paths.length}张 / ${g.pair_ids.length}对`;
+        return {i,text,visible:!search || text.includes(search) || g.member_paths.some(p=>p.includes(search))};
+      }).filter(x=>x.visible).map(x=>`<option value="${x.i}" ${x.i===groupIndex?'selected':''}>${esc(x.text)}</option>`).join('');
+      document.getElementById('content').innerHTML = `
+        <div class="nav"><input id="search" placeholder="按组号、类别或文件名筛选" value="${esc(search)}"><select id="groupSelect">${options}</select>
+        <button class="button" id="prevGroup">上一组</button><button class="button" id="nextGroup">下一组</button></div>
+        <div class="heading"><div><h2>${group.id} · 候选 ${pairIndex+1}/${group.pair_ids.length}</h2><span class="muted">本组 ${group.member_paths.length} 张图片；当前 pHash 汉明距离 ${pair.distance}；原始审计记录 ${pair.audit_pair_indices.length} 对</span></div><span class="badge">${label[state]}</span></div>
+        <div class="cards">${imageCard(pair.path_a)}${imageCard(pair.path_b)}</div>
+        <div class="decisions"><button class="button ${state==='same_source'?'active':''}" data-pair-state="same_source">同源重复</button>
+        <button class="button ${state==='different'?'active':''}" data-pair-state="different">不同图片</button>
+        <button class="button ${state==='uncertain'?'active':''}" data-pair-state="uncertain">暂不确定</button>
+        <button class="button" id="clearPair">撤销本对结论</button></div>${noteBox('pair:'+pair.id)}
+        <div class="pair-list">${group.pair_ids.map((id,i)=>`<button data-pair-index="${i}" class="${i===pairIndex?'selected':''} ${pairState(id)!=='pending'?'done':''}" title="${label[pairState(id)]}">${i+1} · ${pairs[id].distance}</button>`).join('')}</div>`;
+      document.getElementById('search').addEventListener('input', e => {search=e.target.value; renderPairs(); document.getElementById('search').focus(); document.getElementById('search').setSelectionRange(search.length, search.length)});
+      document.getElementById('groupSelect').addEventListener('change', e => {groupIndex=Number(e.target.value);pairIndex=0;render()});
+      document.getElementById('prevGroup').onclick=()=>{groupIndex=Math.max(0,groupIndex-1);pairIndex=0;render()};
+      document.getElementById('nextGroup').onclick=()=>{groupIndex=Math.min(data.groups.length-1,groupIndex+1);pairIndex=0;render()};
+      document.getElementById('clearPair').onclick=()=>{delete decisions.pairs[pair.id];save();render()};
+      document.querySelectorAll('[data-pair-state]').forEach(b=>b.onclick=()=>{decisions.pairs[pair.id]=b.dataset.pairState;save();render()});
+      document.querySelectorAll('[data-pair-index]').forEach(b=>b.onclick=()=>{pairIndex=Number(b.dataset.pairIndex);render()});
+      attachSharedHandlers();
+    }
+    function renderFocus() {
+      const item=data.focus[focusIndex];
+      if (!item) {document.getElementById('content').textContent='暂无单图复核项';return}
+      document.getElementById('content').innerHTML=`<div class="nav"><button class="button" id="prevFocus">上一张</button>
+        <select id="focusSelect">${data.focus.map((x,i)=>`<option value="${i}" ${i===focusIndex?'selected':''}>${esc(x.id)} · ${esc(data.images[x.path].class)} · ${esc(data.images[x.path].name)}</option>`).join('')}</select>
+        <button class="button" id="nextFocus">下一张</button></div>
+        <div class="heading"><div><h2>单图复核 ${focusIndex+1}/${data.focus.length}</h2><span class="muted">${esc(item.path)}</span></div><span class="badge">${label[imageState(item.path)]}</span></div>
+        <div class="focus-reason">${item.reasons.map(esc).join('<br>')}</div><div class="single">${imageCard(item.path)}</div>${noteBox('image:'+item.path)}`;
+      document.getElementById('prevFocus').onclick=()=>{focusIndex=Math.max(0,focusIndex-1);render()};
+      document.getElementById('nextFocus').onclick=()=>{focusIndex=Math.min(data.focus.length-1,focusIndex+1);render()};
+      document.getElementById('focusSelect').onchange=e=>{focusIndex=Number(e.target.value);render()};
+      attachSharedHandlers();
+    }
+    function attachSharedHandlers() {
+      document.querySelectorAll('[data-image]').forEach(b=>b.onclick=()=>{const path=b.dataset.image, status=b.dataset.state; if(decisions.images[path]===status) delete decisions.images[path]; else decisions.images[path]=status;save();render()});
+      const note=document.getElementById('reviewNote'); if(note) note.oninput=()=>{decisions.notes[note.dataset.note]=note.value;save()};
+    }
+    function render() {
+      document.getElementById('tabPairs').classList.toggle('active',tab==='pairs');
+      document.getElementById('tabFocus').classList.toggle('active',tab==='focus');
+      renderStats(); tab==='pairs'?renderPairs():renderFocus();
+    }
+    function download(name, content, mime) {
+      const url=URL.createObjectURL(new Blob([content],{type:mime}));
+      const a=document.createElement('a'); a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),1000);
+    }
+    function exported() {return {schema_version:1,dataset_path:data.dataset_path,audit_path:data.audit_path,
+      exported_at:new Date().toISOString(), pair_decisions:decisions.pairs,image_decisions:decisions.images,notes:decisions.notes}}
+    function csvCell(v){return '"'+String(v??'').replaceAll('"','""')+'"'}
+    document.getElementById('exportJson').onclick=()=>download('review_decisions.json',JSON.stringify(exported(),null,2),'application/json;charset=utf-8');
+    document.getElementById('exportCsv').onclick=()=>{
+      const header=['item_type','id','group_id','class_a','path_a','class_b','path_b','phash_distance','decision','note'];
+      const rows=data.pairs.map(p=>['pair',p.id,p.group_id,data.images[p.path_a].class,p.path_a,data.images[p.path_b].class,p.path_b,p.distance,pairState(p.id),decisions.notes['pair:'+p.id]||'']);
+      data.focus.forEach(x=>rows.push(['focus',x.id,'',data.images[x.path].class,x.path,'','','',imageState(x.path),decisions.notes['image:'+x.path]||'']));
+      Object.entries(decisions.images).forEach(([path,status])=>rows.push(['image_decision','','',data.images[path]?.class||'',path,'','','',status,decisions.notes['image:'+path]||'']));
+      download('review_decisions.csv','\ufeff'+[header,...rows].map(row=>row.map(csvCell).join(',')).join('\r\n'),'text/csv;charset=utf-8');
+    };
+    document.getElementById('importFile').onchange=async e=>{
+      const file=e.target.files[0];if(!file)return;
+      try{const loaded=JSON.parse(await file.text());if(loaded.schema_version!==1||loaded.dataset_path!==data.dataset_path)throw Error('数据集或版本不匹配');
+        const validPairs=new Set(data.pairs.map(x=>x.id)), validImages=new Set(Object.keys(data.images));
+        decisions={pairs:Object.fromEntries(Object.entries(loaded.pair_decisions||{}).filter(([id,v])=>validPairs.has(id)&&['same_source','different','uncertain'].includes(v))),
+          images:Object.fromEntries(Object.entries(loaded.image_decisions||{}).filter(([path,v])=>validImages.has(path)&&['exclude','keep','uncertain'].includes(v))),
+          notes:loaded.notes||{}};save();render();alert('审核结果已导入');
+      }catch(err){alert('导入失败：'+err.message)} e.target.value='';
+    };
+    document.getElementById('reset').onclick=()=>{if(confirm('清空此浏览器中保存的全部人工复核结论？')){decisions=empty();save();render()}};
+    document.getElementById('tabPairs').onclick=()=>{tab='pairs';render()};
+    document.getElementById('tabFocus').onclick=()=>{tab='focus';render()};
+    document.addEventListener('keydown', e => {
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      const target = e.target;
+      if (target?.isContentEditable || ['INPUT','TEXTAREA','SELECT'].includes(target?.tagName)) return;
+      const step = ['ArrowLeft','ArrowUp'].includes(e.key) ? -1 : ['ArrowRight','ArrowDown'].includes(e.key) ? 1 : 0;
+      if (!step) return;
+      e.preventDefault();
+      if (tab === 'pairs') {
+        const next = Math.max(0, Math.min(data.groups.length - 1, groupIndex + step));
+        if (next !== groupIndex) { groupIndex = next; pairIndex = 0; render(); }
+      } else {
+        const next = Math.max(0, Math.min(data.focus.length - 1, focusIndex + step));
+        if (next !== focusIndex) { focusIndex = next; render(); }
+      }
+    });
+    render();
+  })();
+  </script>
+</body>
+</html>

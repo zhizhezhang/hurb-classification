@@ -1,0 +1,136 @@
+{
+  "passed": true,
+  "checks": {
+    "paths_unique_across_splits": true,
+    "complete_manifest_coverage": true,
+    "all_18_classes_in_each_split": true,
+    "confirmed_source_groups_isolated": true,
+    "excluded_images_absent": true,
+    "sha256_unique": true,
+    "source_paths_exist": true
+  },
+  "counts": {
+    "train": 3692,
+    "val": 795,
+    "test": 788
+  },
+  "total": 5275,
+  "actual_ratios": {
+    "train": 0.6999052132701422,
+    "val": 0.15071090047393365,
+    "test": 0.14938388625592416
+  },
+  "class_distribution": {
+    "九层塔": {
+      "total": 247,
+      "train": 173,
+      "val": 37,
+      "test": 37
+    },
+    "人参": {
+      "total": 234,
+      "train": 164,
+      "val": 35,
+      "test": 35
+    },
+    "冬虫夏草": {
+      "total": 248,
+      "train": 174,
+      "val": 37,
+      "test": 37
+    },
+    "干枸杞": {
+      "total": 250,
+      "train": 175,
+      "val": 38,
+      "test": 37
+    },
+    "当归": {
+      "total": 249,
+      "train": 174,
+      "val": 38,
+      "test": 37
+    },
+    "无花果": {
+      "total": 250,
+      "train": 175,
+      "val": 38,
+      "test": 37
+    },
+    "柿蒂": {
+      "total": 235,
+      "train": 165,
+      "val": 35,
+      "test": 35
+    },
+    "槐花": {
+      "total": 248,
+      "train": 174,
+      "val": 37,
+      "test": 37
+    },
+    "灵芝": {
+      "total": 964,
+      "train": 675,
+      "val": 145,
+      "test": 144
+    },
+    "罗汉果": {
+      "total": 245,
+      "train": 171,
+      "val": 37,
+      "test": 37
+    },
+    "艾叶": {
+      "total": 247,
+      "train": 173,
+      "val": 37,
+      "test": 37
+    },
+    "芦荟": {
+      "total": 249,
+      "train": 174,
+      "val": 38,
+      "test": 37
+    },
+    "苍耳子": {
+      "total": 244,
+      "train": 171,
+      "val": 37,
+      "test": 36
+    },
+    "车前草": {
+      "total": 249,
+      "train": 174,
+      "val": 38,
+      "test": 37
+    },
+    "金钱草": {
+      "total": 248,
+      "train": 174,
+      "val": 37,
+      "test": 37
+    },
+    "金银花": {
+      "total": 245,
+      "train": 171,
+      "val": 37,
+      "test": 37
+    },
+    "陈皮": {
+      "total": 245,
+      "train": 171,
+      "val": 37,
+      "test": 37
+    },
+    "黄芪": {
+      "total": 378,
+      "train": 264,
+      "val": 57,
+      "test": 57
+    }
+  },
+  "source_group_count": 4975,
+  "confirmed_group_count": 295,
+  "excluded_count": 91
+}

@@ -1,0 +1,6 @@
+{
+  "peak_cuda_memory_bytes": 948207104,
+  "actual_batch_size": 8,
+  "elapsed_seconds": 1319.7338802999993,
+  "completed_epochs": 13
+}

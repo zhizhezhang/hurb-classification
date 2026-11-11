@@ -1,0 +1,514 @@
+[
+  {
+    "id": "jiucengta",
+    "name": "九层塔",
+    "pinyin": "jiu ceng ta",
+    "image_url": "/assets/herbs/herb_jiucengta.png",
+    "summary": "模型类别“九层塔”；素材原名标为罗勒。九层塔是罗勒的常见名称，插画不构成植物学鉴定。",
+    "recognition_intro": "九层塔又称罗勒，是唇形科芳香草本植物，叶片对生，具有浓郁香气。传统本草中常用于疏风解表、化湿和中，也可作为日常烹饪中的香草。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "九层塔又称罗勒，为唇形科一年生芳香草本植物。茎直立，多分枝，叶片对生，呈卵形或椭圆形，边缘具有细齿。植株散发浓郁香气，顶部常生有轮伞状花序。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "台湾农业部：罗勒（九层塔）植物资料",
+        "location": "https://kmweb.moa.gov.tw/theme_data.php?id=418&theme=plant_illustration"
+      }
+    ],
+    "traditional_effects": "传统本草认为九层塔具有疏风行气、化湿消食、活血解毒等作用。其芳香特征鲜明，也被广泛用作饮食中的香草植物。",
+    "allusion": "九层塔在民间也被称为罗勒、香草。其花序层层向上排列，“九层塔”的名称形象地表现了植株的生长形态。在我国南方饮食文化中，它还是具有地方特色的芳香食材。"
+  },
+  {
+    "id": "renshen",
+    "name": "人参",
+    "pinyin": "ren shen",
+    "image_url": "/assets/herbs/herb_renshen.png",
+    "summary": "模型类别“人参”。规范药材人参为五加科人参的干燥根和根茎；分类结果不能证明实物身份。",
+    "recognition_intro": "人参为五加科植物人参的干燥根和根茎，根部呈纺锤形，具有独特香气。传统中医认为其具有大补元气、补脾益肺、生津养血、安神益智等功效。",
+    "source": "五加科植物人参（Panax ginseng C. A. Mey.）",
+    "medicinal_part": "干燥根和根茎",
+    "appearance": "人参为五加科多年生草本植物。根部肥厚，常呈纺锤形或圆柱形，表面淡黄棕色，具有细密的纵向皱纹。植株具有掌状复叶，成熟时可结出鲜红色浆果。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "香港卫生署：中药材名称、来源及描述示例（引中国药典）",
+        "location": "https://www.cmro.gov.hk/files/gcmti/sharing/2023/Chem_CME_2023.pdf"
+      }
+    ],
+    "traditional_effects": "传统中医认为人参具有大补元气、复脉固脱、补脾益肺、生津养血、安神益智等功效，是传统补气药中的代表性药材。",
+    "allusion": "人参在中国本草文化中具有悠久历史。《神农本草经》已将其列为上品。由于部分人参根部具有类似人体的分枝形态，古人常将其与人的形象联系起来，并赋予其珍贵的文化象征。"
+  },
+  {
+    "id": "dongchongxiacao",
+    "name": "冬虫夏草",
+    "pinyin": "dong chong xia cao",
+    "image_url": "/assets/herbs/herb_dongchongxiacao.png",
+    "summary": "模型类别“冬虫夏草”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "冬虫夏草是冬虫夏草菌与蝙蝠蛾科昆虫幼虫形成的复合体，外形由虫体和真菌子座组成。传统中医认为其具有补肾益肺、止血化痰等功效。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "冬虫夏草是冬虫夏草菌与蝙蝠蛾科昆虫幼虫形成的菌虫复合体。虫体呈黄棕色，具有明显环纹，头部长出细长的深棕色子座，整体外形兼具虫体与真菌特征。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统中医认为冬虫夏草具有补肾益肺、止血化痰等功效，是传统本草中较为特殊的菌类药材。",
+    "allusion": "“冬虫夏草”之名源于古人对其特殊形态和生长过程的观察。古籍以冬季似虫、夏季长出草状子座来描述这一现象。清代《本草从新》等著作中已有相关记载。"
+  },
+  {
+    "id": "gangouqi",
+    "name": "干枸杞",
+    "pinyin": "gan gou qi",
+    "image_url": "/assets/herbs/herb_gangouqi.png",
+    "summary": "模型类别“干枸杞”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "干枸杞通常指宁夏枸杞的干燥成熟果实，呈红色或暗红色，表面略有皱缩。传统中医认为其具有滋补肝肾、益精明目等功效，也常见于日常饮食。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "干枸杞通常指宁夏枸杞的干燥成熟果实。果实呈椭圆形或纺锤形，颜色为红色至暗红色，表面略有皱缩，果肉柔韧，内部含有多枚细小种子。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统中医认为枸杞子具有滋补肝肾、益精明目等功效，是兼具本草文化与饮食文化特色的传统药材。",
+    "allusion": "枸杞在我国具有悠久的栽培与利用历史。宁夏地区因自然条件及栽培传统而形成具有代表性的枸杞产区，枸杞也逐渐成为当地重要的特色农产品与地域文化符号。"
+  },
+  {
+    "id": "danggui",
+    "name": "当归",
+    "pinyin": "dang gui",
+    "image_url": "/assets/herbs/herb_danggui.png",
+    "summary": "模型类别“当归”。所述基原和部位对应规范药材；分类结果不能证明实物身份。",
+    "recognition_intro": "当归为伞形科植物当归的干燥根，表面呈黄棕色，具有浓郁的芳香气味。传统中医认为其具有补血活血、调经止痛、润肠通便等功效。",
+    "source": "伞形科当归属植物当归",
+    "medicinal_part": "干燥根",
+    "appearance": "当归为伞形科多年生草本植物，其药用根部肥厚，通常具有多个分枝。表面呈黄棕色至棕褐色，带有明显纵向皱纹，断面黄白色，具有浓郁而独特的芳香气味。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "威海市农业农村局：当归本草科普",
+        "location": "https://nyj.weihai.gov.cn/art/2026/8/12/art_24105_6544025.html"
+      }
+    ],
+    "traditional_effects": "传统中医认为当归具有补血活血、调经止痛、润肠通便等功效，是传统补血药中的代表性药材。",
+    "allusion": "关于“当归”之名，民间流传着以“应当归来”寄托思念的故事。这属于名称相关的民间传说，并非已经证实的药名起源。当归在历代医籍中也常作为重要的补血药材记载。"
+  },
+  {
+    "id": "wuhuaguo",
+    "name": "无花果",
+    "pinyin": "wu hua guo",
+    "image_url": "/assets/herbs/herb_wuhuaguo.png",
+    "summary": "模型类别“无花果”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "无花果是桑科榕属植物，果实通常呈梨形或近球形，成熟后柔软多汁。除作为水果食用外，其果实在传统植物利用中也有记载，常被认为具有健脾清肠、润肺利咽等作用。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "无花果为桑科落叶灌木或小乔木。叶片宽大，多呈掌状分裂；果实呈梨形或近球形，成熟时颜色因品种不同而变化，内部具有细密的花序结构。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统本草资料认为无花果具有清热生津、健脾开胃、解毒消肿等作用，其果实也被广泛用于日常饮食。",
+    "allusion": "无花果并非真正不开花。它的细小花朵隐藏在膨大的花序内部，因此人们通常看不到明显的开花过程。“无花果”这一名称正是源于这种特殊的植物结构。"
+  },
+  {
+    "id": "shidi",
+    "name": "柿蒂",
+    "pinyin": "shi di",
+    "image_url": "/assets/herbs/herb_shidi.png",
+    "summary": "模型类别“柿蒂”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "柿蒂为柿科植物柿的干燥宿存花萼，通常呈盘状，具有四枚向外伸展的萼片。传统中医认为其具有降气止呃的功效，主要用于呃逆相关的传统辨证应用。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "柿蒂为柿树果实上保留下来的干燥花萼。其外形多呈盘状，中央稍隆起，通常具有四枚向外伸展的萼片。干燥后呈黄棕色或棕褐色，质地较硬。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统中医认为柿蒂具有降气止呃的功效，主要与传统医学对呃逆的辨证应用有关。",
+    "allusion": "柿蒂又称“柿钱”“柿萼”，因外形似小盘或钱状而得名。古代医家注意到柿果顶部这一常被忽略的部分，并将其独立作为药材记载，《本草纲目》中亦有相关论述。"
+  },
+  {
+    "id": "huaihua",
+    "name": "槐花",
+    "pinyin": "huai hua",
+    "image_url": "/assets/herbs/herb_huaihua.png",
+    "summary": "模型类别“槐花”；插画原文件名含“洋槐”。槐与洋槐不能据中文近名视为相同基原，故此处不指定植物学来源。",
+    "recognition_intro": "槐花通常指豆科植物槐的花及花蕾，花朵呈淡黄白色，干燥花蕾称槐米。传统中医认为其具有凉血止血、清肝泻火等功效。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "槐花为豆科植物槐的花及花蕾。花朵细小，呈淡黄白色，组成圆锥花序。干燥花蕾通常称为槐米，形态紧密，具有较高的辨识度。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统中医认为槐花具有凉血止血、清肝泻火等功效，是传统本草中的花类药材。",
+    "allusion": "槐树在中国古代与庭院、官署文化有着密切联系，常被视为具有象征意义的树木。其花蕾和开放花朵均被古代医家关注，并逐渐形成槐米与槐花等不同的商品名称。"
+  },
+  {
+    "id": "lingzhi",
+    "name": "灵芝",
+    "pinyin": "ling zhi",
+    "image_url": "/assets/herbs/herb_lingzhi.png",
+    "summary": "模型类别“灵芝”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "灵芝为灵芝属真菌，菌盖多呈肾形或半圆形，表面具有红褐色光泽和环状纹理。传统中医认为其具有补气安神、止咳平喘等功效。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "灵芝为灵芝属真菌，子实体通常具有木质化菌柄和扇形或肾形菌盖。菌盖表面多呈红褐色，带有漆样光泽和同心环纹，形态独特。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      }
+    ],
+    "traditional_effects": "传统中医认为灵芝具有补气安神、止咳平喘等功效，是中国传统本草文化中具有代表性的真菌药材。",
+    "allusion": "灵芝自古被视为祥瑞之物，常被称为“瑞草”“仙草”。《神农本草经》中已有芝类记载。其形态优美的菌盖也被广泛用于古代绘画、建筑与工艺装饰，象征吉祥长寿。"
+  },
+  {
+    "id": "luohanguo",
+    "name": "罗汉果",
+    "pinyin": "luo han guo",
+    "image_url": "/assets/herbs/herb_luohanguo.png",
+    "summary": "模型类别“罗汉果”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "罗汉果为葫芦科植物罗汉果的干燥果实，外形多呈球形或椭圆形，果皮呈黄褐色。传统中医认为其具有清热润肺、利咽开音、滑肠通便等功效。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "罗汉果为葫芦科攀援植物的果实，通常呈球形或椭圆形，成熟后经干燥呈黄褐色至棕褐色。果皮较薄，内部含有果瓤与多枚种子，味道具有明显的甜味特征。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统中医认为罗汉果具有清热润肺、利咽开音、润肠通便等功效，是具有地方特色的传统药材。",
+    "allusion": "罗汉果主要产于我国广西，尤其与桂林地区的种植文化关系密切。其名称与民间流传的罗汉传说有关，但传说版本不一，缺乏统一的历史考证，因此更适合作为地方民俗文化介绍。"
+  },
+  {
+    "id": "aiye",
+    "name": "艾叶",
+    "pinyin": "ai ye",
+    "image_url": "/assets/herbs/herb_aiye.png",
+    "summary": "模型类别“艾叶”。所述基原和部位对应规范药材；分类结果不能证明实物身份。",
+    "recognition_intro": "艾叶为菊科植物艾的干燥叶，叶片背面常有灰白色绒毛，具有特殊芳香。传统中医认为其具有温经止血、散寒止痛等功效，在中国传统节令习俗中也十分常见。",
+    "source": "菊科植物艾（Artemisia argyi）",
+    "medicinal_part": "干燥叶",
+    "appearance": "艾叶为菊科植物艾的干燥叶。叶片常呈羽状分裂，表面灰绿色，背面密布灰白色绒毛，揉搓后具有浓郁而独特的芳香气味。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "北京市药品监督管理局：艾叶药材来源",
+        "location": "https://yjj.beijing.gov.cn/yjj/zwhd17/zjdc38/10825915/2020070911555137012.pdf"
+      }
+    ],
+    "traditional_effects": "传统中医认为艾叶具有温经止血、散寒止痛等功效，外用在传统医学中还与祛湿止痒有关。",
+    "allusion": "艾草在我国端午节习俗中具有重要地位。民间常将艾草悬挂于门前，寄托驱除不祥、祈求安康的愿望。艾草因此不仅是传统本草植物，也是中国节令文化的重要组成部分。"
+  },
+  {
+    "id": "luhui",
+    "name": "芦荟",
+    "pinyin": "lu hui",
+    "image_url": "/assets/herbs/herb_luhui.png",
+    "summary": "模型类别“芦荟”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "芦荟是芦荟属多肉植物，叶片肥厚，边缘具有小齿。部分药用芦荟制品在传统中医中具有泻下通便、清肝等功效，但药用部位和加工形式与普通观赏芦荟叶片不同。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "芦荟为多年生多肉植物，叶片肥厚，通常呈披针形，边缘具有细小齿刺。叶片内部含有较多水分，植株整体常呈莲座状排列。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      }
+    ],
+    "traditional_effects": "传统中医所称的药用芦荟，主要涉及特定植物叶汁加工形成的药材，具有泻下通便、清肝等传统功效。普通观赏芦荟的鲜叶不能直接等同于药用芦荟。",
+    "allusion": "芦荟具有悠久的植物利用历史，曾通过不同地区之间的贸易与交流传播。它既被作为观赏植物栽培，也在部分传统医药体系中受到重视，体现了药用植物跨地域传播的特点。"
+  },
+  {
+    "id": "cangerzi",
+    "name": "苍耳子",
+    "pinyin": "cang er zi",
+    "image_url": "/assets/herbs/herb_cangerzi.png",
+    "summary": "模型类别“苍耳子”。所述基原和部位对应规范药材；分类结果不能证明实物身份。",
+    "recognition_intro": "苍耳子为菊科植物苍耳的干燥成熟带总苞果实，表面密布钩状硬刺。传统中医认为其具有散风寒、通鼻窍、祛风湿等功效。苍耳子具有毒性，不宜自行采食或使用。",
+    "source": "菊科植物苍耳（Xanthium sibiricum Patr.）",
+    "medicinal_part": "干燥成熟带总苞的果实",
+    "appearance": "苍耳子为菊科植物苍耳的干燥成熟带总苞果实。果实呈椭圆形或纺锤形，表面密布坚硬的钩状刺，顶端通常具有两枚较长的刺。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "重庆市中药饮片炮制规范及标准：苍耳子",
+        "location": "https://yaojianju.cq.gov.cn/zwgk_n2104/zfxxgkml/zcwjn2104/qtwjn2104/202204/P020220424552289378125.pdf"
+      }
+    ],
+    "traditional_effects": "传统中医认为苍耳子具有散风寒、通鼻窍、祛风湿等功效。苍耳子具有毒性，不可自行采食或随意使用。",
+    "allusion": "苍耳子的果实表面具有钩状刺，容易附着在动物毛发和衣物上，借此传播种子。这种独特的自然传播方式，使苍耳子成为观察植物适应环境与种子扩散现象的典型材料。"
+  },
+  {
+    "id": "cheqiancao",
+    "name": "车前草",
+    "pinyin": "che qian cao",
+    "image_url": "/assets/herbs/herb_cheqiancao.png",
+    "summary": "模型类别“车前草”。本条插画用于页面展示，尚未核实训练图片的具体基原。",
+    "recognition_intro": "车前草为车前科车前属植物，叶片常从基部丛生，叶脉明显，具有细长花序。传统中医认为其具有清热利尿、祛痰、凉血、解毒等功效。",
+    "source": null,
+    "medicinal_part": null,
+    "appearance": "车前草为车前科多年生草本植物。叶片从基部丛生，呈卵形或椭圆形，叶脉明显。植株中央抽出细长花葶，顶端形成密集的穗状花序。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      }
+    ],
+    "traditional_effects": "传统中医认为车前草具有清热利尿通淋、祛痰、凉血、解毒等功效，是较为常见的全草类药材。",
+    "allusion": "“车前”这一名称与植物常生长于道路旁、车马经过之处的特征有关。它生命力较强，在田野和路边较为常见，因此也成为古代人们容易观察和认识的本草植物。"
+  },
+  {
+    "id": "jinqiancao",
+    "name": "金钱草",
+    "pinyin": "jin qian cao",
+    "image_url": "/assets/herbs/herb_jinqiancao.png",
+    "summary": "模型类别“金钱草”。规范药材金钱草与广金钱草基原不同；现有插画的物种未获标本鉴定。",
+    "recognition_intro": "金钱草为报春花科植物过路黄的干燥全草，叶片多为圆形或心形，开黄色小花。传统中医认为其具有利湿退黄、利尿通淋、解毒消肿等功效。金钱草与广金钱草的植物来源不同。",
+    "source": "规范药材金钱草：报春花科过路黄（Lysimachia christinae Hance）；不代表插画或训练图片均经此基原鉴定。",
+    "medicinal_part": "规范药材为干燥全草；训练图片的药用部位未核实。",
+    "appearance": "金钱草为报春花科植物过路黄的干燥全草。植株茎细长，常匍匐生长，叶片对生，多呈圆形或宽卵形，开黄色小花。",
+    "traditional_uses": "香港卫生署引述《中国药典》（2020版）记载“利湿退黄、利尿通淋”等传统功能；此处仅为文献记述，不表示临床疗效。",
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "香港卫生署政府中药检测中心：金钱草与广金钱草鉴别",
+        "location": "https://www.cmro.gov.hk/files/gcmti/research/mmi/ech_search/005_HL_vs_HDS_sc.pdf"
+      },
+      {
+        "title": "香港卫生署政府中药检测中心：过路黄参考DNA序列资料表",
+        "location": "https://www.cmro.gov.hk/files/gcmti/research/btc/dna_sequences/Factsheet_Lysimachia_christinae_SC.pdf"
+      }
+    ],
+    "traditional_effects": "传统中医认为金钱草具有利湿退黄、利尿通淋、解毒消肿等功效。金钱草与广金钱草来源不同，不应混为同一种药材。",
+    "allusion": "金钱草因叶片外形近似圆形铜钱而得名，民间也有“一串钱”等形象称呼。这种以外观特征命名植物的方式，在传统本草文化中十分常见。"
+  },
+  {
+    "id": "jinyinhua",
+    "name": "金银花",
+    "pinyin": "jin yin hua",
+    "image_url": "/assets/herbs/herb_jinyinhua.png",
+    "summary": "模型类别“金银花”。所述基原和部位对应规范药材；分类结果不能证明实物身份。",
+    "recognition_intro": "金银花为忍冬科植物忍冬的花蕾或初开的花，花朵初开时色浅，随后逐渐变黄。传统中医认为其具有清热解毒、疏散风热等功效。",
+    "source": "忍冬科植物忍冬（Lonicera japonica Thunb.）",
+    "medicinal_part": "干燥花蕾或带初开的花",
+    "appearance": "金银花为忍冬科植物忍冬的花蕾或初开的花。花朵细长，常成对着生，初开时多为白色，开放后逐渐转为黄色，具有清香气味。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "香港卫生署政府中药检测中心：金银花与山银花鉴别",
+        "location": "https://www.cmro.gov.hk/files/gcmti/research/mmi/ech_search/011_LJF_vs_LF_sc.pdf"
+      }
+    ],
+    "traditional_effects": "传统中医认为金银花具有清热解毒、疏散风热等功效，是传统本草中常见的花类药材。",
+    "allusion": "金银花因花朵初开呈白色，随后转为黄色，常出现黄白两色并存的景象而得名。《本草纲目》等古籍对其有所记载，其名称也体现了古人通过观察植物颜色变化进行命名的特点。"
+  },
+  {
+    "id": "chenpi",
+    "name": "陈皮",
+    "pinyin": "chen pi",
+    "image_url": "/assets/herbs/herb_chenpi.png",
+    "summary": "模型类别“陈皮”。所述基原和部位对应规范药材；分类结果不能证明实物身份。",
+    "recognition_intro": "陈皮为芸香科植物橘及其栽培变种的干燥成熟果皮，呈橙红色或红棕色，具有独特的柑橘芳香。传统中医认为其具有理气健脾、燥湿化痰等功效。",
+    "source": "芸香科植物橘及其栽培变种",
+    "medicinal_part": "干燥成熟果皮",
+    "appearance": "陈皮为芸香科植物橘及其栽培变种的干燥成熟果皮。外表面呈橙红色或红棕色，具有细小油点，内表面较浅，散发明显的柑橘芳香。",
+    "traditional_uses": null,
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "北京市中医药管理局：陈皮资料",
+        "location": "https://zyj.beijing.gov.cn/ylfw/ysbj/201912/t20191223_1412717.html"
+      }
+    ],
+    "traditional_effects": "传统中医认为陈皮具有理气健脾、燥湿化痰等功效，是常见的传统理气药材。",
+    "allusion": "陈皮由成熟橘皮经过干燥和贮藏形成。“陈皮”之名体现了传统本草对药材加工与贮藏的重视。在岭南地区，新会陈皮形成了具有地方特色的种植、加工和收藏文化。"
+  },
+  {
+    "id": "huangqi",
+    "name": "黄芪",
+    "pinyin": "huang qi",
+    "image_url": "/assets/herbs/herb_huangqi.png",
+    "summary": "模型类别“黄芪”。规范药材黄芪为蒙古黄芪或膜荚黄芪的干燥根；分类结果不能证明实物身份。",
+    "recognition_intro": "黄芪主要来源于蒙古黄芪或膜荚黄芪的干燥根，呈长圆柱形，表面具有纵向皱纹。传统中医认为其具有补气升阳、固表止汗、利水消肿、生津养血等功效。",
+    "source": "豆科植物蒙古黄芪或膜荚黄芪",
+    "medicinal_part": "干燥根",
+    "appearance": "黄芪为豆科植物蒙古黄芪或膜荚黄芪的干燥根。根部呈长圆柱形，表面淡黄棕色，具有纵向皱纹，断面颜色较浅，质地较坚实。",
+    "traditional_uses": "《中国药典》（2020版，经香港卫生署黄芪专题引述）记载“补气升阳、固表止汗”等传统功能；此处仅为文献记述，不表示临床疗效。",
+    "references": [
+      {
+        "title": "模型类别映射",
+        "location": "reports/data_split/class_to_idx.json"
+      },
+      {
+        "title": "视觉素材映射",
+        "location": "docs/asset-manifest.md"
+      },
+      {
+        "title": "香港卫生署《香港中药材标准》药材清单",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/hkcmms/cmmlist.html"
+      },
+      {
+        "title": "香港卫生署政府中药检测中心：黄芪专题",
+        "location": "https://www.cmro.gov.hk/html/gb/useful_information/gcmti/thematic_exhibitions/radix_astragali/radix_astragali.html"
+      }
+    ],
+    "traditional_effects": "传统中医认为黄芪具有补气升阳、固表止汗、利水消肿、生津养血等功效，是传统补气药中的重要药材。",
+    "allusion": "黄芪在历代本草中受到重视，古代医家常将其视为重要的补气药材。传统医药文化中也有将黄芪称作“补药之长”的说法，体现其在补益类药材中的历史地位。"
+  }
+]

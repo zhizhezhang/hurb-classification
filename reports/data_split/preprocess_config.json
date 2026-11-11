@@ -1,0 +1,39 @@
+{
+  "model": "convnext_tiny",
+  "torchvision_weights": "ConvNeXt_Tiny_Weights.IMAGENET1K_V1",
+  "image_color_mode": "RGB",
+  "input_shape": [
+    3,
+    224,
+    224
+  ],
+  "normalization_mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "normalization_std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "evaluation": {
+    "resize_shorter_side": 236,
+    "center_crop": 224,
+    "interpolation": "bilinear",
+    "deterministic": true
+  },
+  "training": {
+    "random_resized_crop": 224,
+    "crop_scale": [
+      0.8,
+      1.0
+    ],
+    "horizontal_flip_probability": 0.5,
+    "color_jitter": {
+      "brightness": 0.1,
+      "contrast": 0.1,
+      "saturation": 0.05
+    }
+  }
+}

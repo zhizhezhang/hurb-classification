@@ -1,0 +1,71 @@
+# Local source images and generated visual assets
+/Chinese Medicine datasets/
+/herb_classifier/imgs/
+
+# Raw training runs and evaluation output (selected records live in experiments/)
+**/runs/
+/convnext-herb-classifier/reports/
+
+# Keep concise data governance reports; omit image inventories and review previews
+/reports/data_audit/*
+!/reports/data_audit/report.md
+!/reports/data_audit/summary.json
+!/reports/data_audit/class_summary.csv
+!/reports/data_audit/class_counts.png
+!/reports/data_audit/image_dimensions.png
+/reports/data_cleaning/*
+!/reports/data_cleaning/report.md
+!/reports/data_cleaning/review_report.md
+!/reports/data_cleaning/processing_summary.json
+!/reports/data_cleaning/review_summary.json
+!/reports/data_cleaning/review_decisions_submitted.csv
+!/reports/data_cleaning/review_decisions_submitted.json
+!/reports/data_cleaning/reviewed_clean_manifest.csv
+!/reports/data_cleaning/reviewed_excluded_images.csv
+!/reports/data_cleaning/confirmed_source_groups.csv
+/reports/data_split/*
+!/reports/data_split/class_to_idx.json
+!/reports/data_split/preprocess_config.json
+!/reports/data_split/split_config.json
+!/reports/data_split/split_report.md
+!/reports/data_split/validation_results.json
+!/reports/data_split/class_split_counts.png
+!/reports/data_split/train.csv
+!/reports/data_split/val.csv
+!/reports/data_split/test.csv
+
+# Model checkpoints and local data stores
+/backend/runtime/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.db
+*.sqlite
+*.sqlite3
+
+# Python, editors and frontend build output
+**/__pycache__/
+*.py[cod]
+**/.pytest_cache/
+**/.mypy_cache/
+**/.ruff_cache/
+**/.cache/
+**/.idea/
+**/.vscode/
+**/.venv/
+**/venv/
+**/env/
+**/node_modules/
+**/dist/
+/frontend/.vite/
+
+# Credentials and local configuration
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+*api_key*
+*secret*

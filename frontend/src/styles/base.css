@@ -1,0 +1,40 @@
+@font-face {
+  font-family: 'Ma Shan Zheng';
+  src: url('../assets/fonts/MaShanZheng-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'JiangXi ZhuoKai';
+  src: url('../assets/fonts/JiangXiZhuoKai-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  --font-title: 'Ma Shan Zheng', 'KaiTi', cursive;
+  --font-subtitle: 'JiangXi ZhuoKai', 'KaiTi', 'STKaiti', 'Kaiti SC', serif;
+  --font-body: 'KaiTi', 'STKaiti', 'Kaiti SC', serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+}
+
+.placeholder-view-title {
+  font-family: var(--font-title);
+}
+
+#app {
+  min-height: 100vh;
+}

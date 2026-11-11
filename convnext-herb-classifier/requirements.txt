@@ -1,0 +1,5 @@
+# Use the existing herb-classifier Conda environment; do not reinstall CUDA PyTorch.
+numpy
+Pillow
+PyYAML
+matplotlib
